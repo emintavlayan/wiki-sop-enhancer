@@ -1,0 +1,75 @@
+/* ======================================================
+   Wiki Checkbox Styles
+   Author: Emin Tavlayan /eta
+   Added: 2025-10-15
+   Purpose:
+     Defines the visual style for interactive [c] checklists.
+     Used in combination with the "Wiki Checkbox Converter"
+     JavaScript from common.js.
+
+   Notes:
+     - Fully standalone (safe in shared CSS environments)
+     - Checkbox resets visually on page reload (non-persistent)
+====================================================== */
+
+.task-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    margin-right: 0.5em;
+    vertical-align: top;
+    flex-shrink: 0;
+}
+
+.checkmark {
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 2px;
+}
+
+.checkbox-container:hover .checkmark {
+    background-color: #ccc;
+}
+
+.task-checkbox:checked + .checkmark {
+    background-color: #2196F3;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.task-checkbox:checked + .checkmark:after {
+    display: block;
+}
+
+.checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checked {
+    color: #6c757d;
+    text-decoration: line-through;
+}
+
+/* ======================================================
+   End of Wiki Checkbox Styles
+====================================================== */
