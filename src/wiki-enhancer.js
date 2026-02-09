@@ -124,8 +124,15 @@ function enableChecklist(root) {
 
 (function initEnhancer() {
     chrome.storage.sync.get(
-        { enableChecklist: true, enableNotes: true },
-        (opts) => {
+      {
+        enableChecklist: true,
+        enableNotes: true,
+        wikiUrlContains: "radiowiki"
+      },
+      (opts) => {
+
+            // URL guard: do nothing if page does not match
+            if (!location.href.includes(opts.wikiUrlContains)) return;
 
             const root = document.querySelector("#mw-content-text");
             if (!root) return;
