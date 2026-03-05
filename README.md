@@ -84,4 +84,4 @@ MIT
 ## Contact
 
 Maintainer: Emin Tavlayan  
-Feedback and improvement ideas are [welcome](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+Feedback and improvement ideas are welcome.
